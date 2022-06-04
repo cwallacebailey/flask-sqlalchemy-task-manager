@@ -12,20 +12,9 @@ postgres=# \c taskmanager;
 You are now connected to database "taskmanager" as user "gitpod".
 taskmanager=# 
 
-# hit \q to leave and now we connect the database
-# type python3 
-# type from taskmanager import db
-# type db.create_all()
+Then need to create hidden variables so type "touch env.py"
 
-
-
-
-
-
-
-
-
-
+# Add below into it
 
 import os
 
@@ -35,3 +24,8 @@ os.environ.setdefault("SECRET_KEY", "any_secret_key")
 os.environ.setdefault("DEBUG", "True")
 os.environ.setdefault("DEVELOPMENT", "True")
 os.environ.setdefault("DB_URL", "postgresql:///taskmanager")
+
+# hit \q to leave and now we connect the database
+# type python3 
+# type from taskmanager import db
+# type db.create_all()
